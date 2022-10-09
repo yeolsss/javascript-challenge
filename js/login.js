@@ -1,6 +1,7 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form__input');
 const loginSpan = document.querySelector('#login-form__title');
+const todoForm = document.querySelector('#todo-form');
 
 const USERNAME_KEY = 'username';
 const HIDDEN_CLASSNAME = 'hidden';
@@ -8,6 +9,7 @@ const HIDDEN_CLASSNAME = 'hidden';
 function hiddenFn() {
   loginSpan.classList.toggle(HIDDEN_CLASSNAME);
   loginForm.classList.toggle(HIDDEN_CLASSNAME);
+  todoForm.classList.toggle(HIDDEN_CLASSNAME);
 }
 
 function onLoginSubmit(info) {

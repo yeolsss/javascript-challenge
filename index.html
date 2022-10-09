@@ -7,24 +7,65 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <span id="clock-span" class="clock-span"></span>
+    <div class="container">
+      <!-- weather section -->
+      <section id="weather" class="weather-section">
+        <div>
+          <span id="weather__city"></span>
+          <div>
+            <p id="weather__lat"></p>
+            <p id="weather__lon"></p>
+          </div>
+        </div>
+        <div>
+          <img id="weather__icon" src="" alt="" />
+          <div><span id="weather__text"></span>&deg;C</div>
+        </div>
+      </section>
+      <!-- weather section end -->
 
-    <!-- login section -->
-    <form id="login-form" class="login-form">
-      <input
-        type="text"
-        required
-        maxlength="15"
-        class="login-form__input"
-        id="login-form__input"
-        placeholder="이름을 입력해 주세요."
-      />
-    </form>
-    <span id="login-form__title" class="login-form__title hidden"></span>
-    <!-- login section end -->
+      <span id="clock-span" class="clock-span"></span>
 
-    <!--  -->
+      <!-- login section -->
+      <section class="login-section">
+        <form id="login-form" class="login-form">
+          <input
+            type="text"
+            required
+            maxlength="15"
+            class="login-form__input"
+            id="login-form__input"
+            placeholder="이름을 입력해 주세요."
+          />
+        </form>
+        <span id="login-form__title" class="login-form__title hidden"></span>
+      </section>
+      <!-- login section end -->
+
+      <!-- todo section -->
+      <section class="todo-section">
+        <form class="todo-form hidden" id="todo-form">
+          <div>
+            <input
+              type="text"
+              id="todo-form__input"
+              class="todo-form__input"
+              placeholder="할 일을 입력해 주세요."
+              required
+            />
+            <button class="todo-form__button">Add</button>
+          </div>
+        </section>
+      </form>
+      <section class="todos-section">
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+      <!-- todo section end -->
+    </div>
   </body>
   <script src="js/clock.js"></script>
   <script src="js/login.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/weather.js"></script>
 </html>

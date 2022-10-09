@@ -1,3 +1,154 @@
+@font-face {
+  src: url('../fonts/Neodgm.woff');
+  font-family: 'Neodgm';
+}
+@font-face {
+  font-family: dongle;
+  src: url('../fonts/Dongle-Regular.ttf');
+}
+
+:root {
+  --font-color: rgb(229, 228, 228);
+}
+
+* {
+  color: var(--font-color);
+  font-family: dongle;
+}
+body {
+  font-family: dongle;
+  color: whitesmoke;
+  font-size: 90px;
+}
 .hidden {
   display: none;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 30px;
+}
+
+.weather-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.weather-section > div {
+  height: 100%;
+  opacity: 0.5;
+  color: white;
+}
+
+.weather-section > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  font-size: 0.4em;
+}
+.weather-section > div:last-child {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.clock-span {
+  margin: 4% 0px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.login-section {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+.login-section span {
+  font-size: 0.5em;
+}
+
+button {
+  text-shadow: 1px 1px 1px gray;
+  background-color: transparent;
+  border: 0px;
+  font-size: 0.5em;
+  cursor: pointer;
+}
+input {
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom: 1px solid var(--font-color);
+  background-color: transparent;
+  width: 100%;
+  font-size: 0.5em;
+}
+
+input::placeholder {
+  text-shadow: 1px 1px 1px gray;
+  color: var(--font-color);
+}
+
+.todo-section {
+  width: 90%;
+}
+
+.todo-section input {
+  width: 30%;
+}
+.todo-section div {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-section button {
+  margin-left: 10px;
+  font-size: 0.4em;
+  border-radius: 5px;
+  transition: color 0.5s ease-in;
+  transition: background-color 1s ease-in;
+}
+
+.todo-section button:hover {
+  color: gary;
+  background-color: var(--font-color);
+}
+
+.todos-section {
+  margin-top: 2%;
+  width: 50%;
+  font-size: 0.5em;
+}
+.todos-section button {
+  margin-left: 10px;
+  font-family: 'Noedgm';
+}
+
+.todos-section ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todos-section li {
+  padding: 0px 15px;
+  height: 60px;
+  border: 1px solid var(--font-color);
+  border-radius: 10px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
